@@ -1,0 +1,81 @@
+{
+	"general" : {
+		"name" 					: "Nimi",
+		"email"					: "Sähköposti",
+		"phone"					: "Puhelin",
+		"dateFormat"			: "DD.MM.YYYY"
+	},
+	"header" : {
+		"emailUs"				: "Laita meille sähköpostia!",
+		"callUs"				: "SOITA!",
+		"24hService"			: "24h päivystys"
+	},
+	"navHeaders"	: {
+		"frontPage"				: "Etusivu",
+		"services"				: "Palvelut",
+		"installationProducts"	: "Asennustuotteet",
+		"hvacServices"			: "LVI-palvelut",
+		"rates"					: "Hinnasto",
+		"company"				: "Yritys",
+		"companyInfo"			: "Tietoja",
+		"references"			: "Referenssit",
+		"contactInfo"			: "Yhteydenotto",
+		"contactDetails"		: "Yhteystiedot",
+		"contactUs"				: "Ota yhteyttä",
+		"faq"					: "Kysymykset",
+		"recruitment"			: "Rekrytointi"
+	},
+	"homePage" : {
+		"contactUs"				: "Ota yhteyttä",
+		"requestQuote"			: "Pyydä tarjous",
+		"viewProductDetails"	: "Tuotteen tiedot"
+	},
+	"contactUs" : {
+		"pageHeader"			: "Ota yhteyttä",
+		"yourMessage"			: "Viestisi",
+		"sendMessage"			: "Lähetä viesti",
+		"messageSent"			: "Viesti lähetetty!"
+	},
+	"faq" : {
+		"pageHeader"			: "Kysymykset",
+		"question"				: "Kysymyksesi",
+		"sendQuestion"			: "Lähetä kysymys",
+		"questionSent"			: "Kysymys lähetetty!"
+	},
+	"recruitment" : {
+		"pageHeader"			: "Rekrytointi",
+		"openVacancies"			: "Avoimet työpaikat",
+		"noVacancies"			: "Ei avoimia työpaikkoja",
+		"endsAt"				: "Haku päättyy",
+		"description"			: "Kuvaus",
+		"vacancyName"			: "Tehtävä",
+		"application"			: "Hakemus",
+		"sendApplication"		: "Lähetä hakemus",
+		"applicationSent"		: "Hakemus lähetetty!"
+	},
+	"installationProducts" : {
+		"pageHeader"			: "Asennustuotteet",
+		"suggestProducts"		: "Ehdota asennustuotteita",
+		"withInstallation"		: "asennettuna"
+	},
+	"hvacServices" : {
+		"pageHeader"			: "LVI-palvelut",
+		"contactUs"				: "Ota yhteyttä!"
+	},
+	"rates" : {
+		"pageHeader"			: "Hinnasto",
+		"billableType"			: "Tuntihinnasto",
+		"vat24"					: "ALV 24%",
+		"baseHourlyBilling"		: "Perustuntiveloitus",
+		"travelExpenses"		: "Matkakustannukset",
+		"serviceCarFlatRate"	: "Huoltoautokorvaus 25km säteelle",
+		"ratePerKm"				: "Kilometrikorvaus"
+	},
+	"product" : {
+		"requestQuote"			: "Pyydä tarjous"
+	},
+	"contactDetails" : {
+		"pageHeader"			: "Yhteystiedot",
+		"contacts"				: "Henkilöstö"
+	}
+}

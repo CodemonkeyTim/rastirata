@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col s12">
+		<div id="needle" style="transform: rotate({{ needleDirection }}deg);">
+			
+		</div>
+	</div>
+</div>
+
+<style>
+	#needle {
+		height: 300px;
+		width: 200px;
+		
+		position: absolute;
+		left: 50%;
+		top: 100px;
+
+		margin-left: -100px;
+
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		background-image: url('gfx/needle1.png');
+
+		transition: all .25s ease;
+	}
+</style>
