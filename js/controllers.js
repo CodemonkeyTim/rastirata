@@ -25,18 +25,26 @@
 
 			var permissions = cordova.plugins.permissions;
 
-			permissions.requestPermission(permissions.ACCESS_FINE_LOCATION, function () {
-				$interval(function () {
-					NeedleService.getDirection().then(function (direction) {
-						$scope.needleDirection = direction;
-					}, function (error) {
-						alert(error.message);
-						alert(error.code);
-					});
-				}, 5000);
-			}, function () {
-				alert("Tää ei toimi jos et anna lupaa :(");
-			});
+			permissions.requestPermission(permissions.ACCESS_FINE_LOCATION, success, error);
+
+			function error() {
+			  alert("Tää ei toimi jos et anna lupaa :(");
+			}
+
+			function success( status ) {
+			  	if( !status.hasPermission ) {
+			  		error();
+			  	} else {
+			  		$interval(function () {
+						NeedleService.getDirection().then(function (direction) {
+							$scope.needleDirection = direction;
+						}, function (error) {
+							alert(error.message);
+							alert(error.code);
+						});
+					}, 5000);
+			  	}
+			}
 		}
 	]);
 }
