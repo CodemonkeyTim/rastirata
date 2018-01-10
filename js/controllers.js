@@ -1,7 +1,21 @@
 ﻿function initControllers() {
-	rastirataControllers.controller('loginCtrl', ['$scope', 
-		function ($scope) {
+	rastirataControllers.controller('loginCtrl', ['$scope', '$timeout', '$location',
+		function ($scope, $timeout, $location) {
+			$scope.secret = "";
+
+			$scope.secretNotCorrectVisible = false;
 			
+			$scope.checkSecretKey = function () {
+				$scope.secretNotCorrectVisible = false;
+
+				$timeout(function () {
+					if ($scope.secret != "1604") {
+						$scope.secretNotCorrectVisible = true;
+					} else {
+						$location.path("/needle")
+					}
+				}, 1000);
+			}
 		}
 	]);
 
@@ -10,7 +24,7 @@
 			$scope.needleDirection = 0;
 
 			$interval(function () {
-				$scope.needleDirection += NeedleService.getDirection();
+				$scope.needleDirection = NeedleService.getDirection();
 			}, 250);
 		}
 	]);

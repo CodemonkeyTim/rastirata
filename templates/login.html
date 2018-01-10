@@ -1,18 +1,35 @@
 <div class="row">
-	<div class="col s12 m8 offset-m2">
-		<h2 id="welcome">Tervetuloa</h2>
-
-		<p id="introduction">
-			Kertokaa toki itsestänne jotakin ennen kuin aloitetaan
-		</p>
+	<div class="">
+		<h2 id="welcome">Anna salainen avain</h2>
 	</div>
 </div>
 
+<br />
+
 <div class="row">
-	<div class="input-field col s12 m8 offset-m2">
-		<input type="text">
-		<label for="name">Ryhmänne nimi</label>
+	<div class="col-sm">
+		<input class="btn-block form-control" placeholder="Salainen avain" ng-model="secret">
     </div>
+</div>
+
+<br />
+
+<div class="row">
+	<div class="col-sm">
+		<button class="btn btn-lg btn-block btn-success" ng-click="checkSecretKey()">
+			Jatka
+		</button>
+	</div>
+</div>
+
+<div class="row" ng-if="secretNotCorrectVisible">
+	<div class="col-sm">
+		<br />
+
+		<div class="alert alert-danger" role="alert" >
+			Väärä salainen avain. Yritä uudestaan...
+		</div>
+	</div>
 </div>
 
 <style>
@@ -21,26 +38,19 @@
 
 		text-align: center;
 
-		font-family: adventure;
-
-		font-size: 69px;
-	}
-
-	#introduction {
-		font-family: adventure;
-
-		text-align: center;
-
-		width: 100%;
-
-		font-size: 21px;
+		font-size: 42px;
 	}
 
 	.input-field input, .input-field label {
-		font-family: adventure !important;
+		color: #333;
+	}
+
+	button {
+		width: 100%;
 	}
 
 	body {
-		background-color: #e40f3b;
+		padding-top: 50px;
+		background-color: #607d8b;
 	}
 </style>

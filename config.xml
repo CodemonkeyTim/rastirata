@@ -26,6 +26,7 @@
 	
 	<gap:plugin name="cordova-plugin-camera" 		source="npm" />
 	<gap:plugin name="cordova-plugin-whitelist" 	source="npm" />
+	<gap:plugin name="cordova-plugin-geolocation" 	source="npm" />
 	
 	<!-- iOS -->
 	<preference name="StatusBarOverlaysWebView" value="false" />
