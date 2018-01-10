@@ -23,14 +23,20 @@
 		function ($scope, $interval, NeedleService) {
 			$scope.needleDirection = 0;
 
-			$interval(function () {
-				NeedleService.getDirection().then(function (direction) {
-					$scope.needleDirection = direction;
-				}, function (error) {
-					alert(error.message);
-					alert(error.code);
-				});
-			}, 5000);
+			var permissions = cordova.plugins.permissions;
+
+			permissions.requestPermission(permissions.ACCESS_FINE_LOCATION, function () {
+				$interval(function () {
+					NeedleService.getDirection().then(function (direction) {
+						$scope.needleDirection = direction;
+					}, function (error) {
+						alert(error.message);
+						alert(error.code);
+					});
+				}, 5000);
+			}, function () {
+				alert("Tää ei toimi jos et anna lupaa :(");
+			});
 		}
 	]);
 }
