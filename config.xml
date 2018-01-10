@@ -3,8 +3,15 @@
 	xmlns   		= 	"http://www.w3.org/ns/widgets"
     xmlns:gap   	= 	"http://phonegap.com/ns/1.0"
 	xmlns:android 	= 	"http://schemas.android.com/apk/res/android"
-	id				=	"com.vaintee.eastirata" 
+	id				=	"com.vaintee.rastirata" 
 	version="1.1.2">
+
+	<platform name="android">
+        <config-file parent="/*" platform="android" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+    </platform>
 	
 	<name>Rastirata</name>
 	

@@ -25,7 +25,7 @@
 
 			var permissions = cordova.plugins.permissions;
 
-			permissions.requestPermission(permissions.ACCESS_COARSE_LOCATION, success, error);
+			permissions.requestPermission(permissions.ACCESS_FINE_LOCATION, success, error);
 
 			function error() {
 			  alert("Tää ei toimi jos et anna lupaa :(");
