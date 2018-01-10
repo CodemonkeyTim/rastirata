@@ -27,9 +27,9 @@
 				NeedleService.getDirection().then(function (direction) {
 					$scope.needleDirection = direction;
 				}, function (error) {
-					console.log("Errorrr");
+					console.log(error);
 				});
-			}, 500);
+			}, 5000);
 		}
 	]);
 }

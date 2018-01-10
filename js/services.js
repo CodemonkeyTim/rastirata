@@ -9,7 +9,7 @@ function initServices() {
 
 		var geoOptions = {
 			maximumAge: 3000,
-			timeout: 450
+			timeout: 5000
 		}
 
 		function getDirection () {
