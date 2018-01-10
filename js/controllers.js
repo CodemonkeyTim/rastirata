@@ -16,6 +16,12 @@
 					}
 				}, 1000);
 			}
+
+			cordova.plugins.locationAccuracy.request(function () {
+				alert("Kek");
+			}, function () {
+				alert("Lel");
+			}, cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY);
 		}
 	]);
 

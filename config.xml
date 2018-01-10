@@ -7,11 +7,15 @@
 	version="1.1.2">
 
 	<platform name="android">
-        <config-file parent="/*" platform="android" target="AndroidManifest.xml">
-            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        </config-file>
-    </platform>
+	    <plugin name="cordova-custom-config" version="*"/>
+	     
+	    <custom-config-file target="AndroidManifest.xml" parent="/*">
+	        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	    </custom-config-file>
+	</platform>
+
+	<plugin name="cordova-plugin-request-location-accuracy" source="npm" />
 	
 	<name>Rastirata</name>
 	
