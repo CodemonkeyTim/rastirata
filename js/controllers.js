@@ -24,8 +24,12 @@
 			$scope.needleDirection = 0;
 
 			$interval(function () {
-				$scope.needleDirection = NeedleService.getDirection();
-			}, 250);
+				NeedleService.getDirection().then(function (direction) {
+					$scope.needleDirection = direction;
+				}, function (error) {
+					console.log("Errorrr");
+				});
+			}, 500);
 		}
 	]);
 }
