@@ -17,11 +17,13 @@
 				}, 1000);
 			}
 
+			/*
 			cordova.plugins.locationAccuracy.request(function () {
 				alert("Kek");
 			}, function () {
 				alert("Lel");
 			}, cordova.plugins.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY);
+			*/
 		}
 	]);
 
@@ -29,9 +31,18 @@
 		function ($scope, $interval, NeedleService) {
 			$scope.needleDirection = 0;
 
-			var permissions = cordova.plugins.permissions;
+			//var permissions = cordova.plugins.permissions;
 
-			permissions.requestPermission(permissions.ACCESS_FINE_LOCATION, success, error);
+			$interval(function () {
+				NeedleService.getDirection().then(function (direction) {
+					$scope.needleDirection = direction;	
+				}, function (error) {
+					alert(error.message);
+					alert(error.code);
+				});
+			}, 5000);
+
+			/* permissions.requestPermission(permissions.ACCESS_FINE_LOCATION, success, error);
 
 			function error() {
 			  alert("Tää ei toimi jos et anna lupaa :(");
@@ -50,7 +61,7 @@
 						});
 					}, 5000);
 			  	}
-			}
+			}*/
 		}
 	]);
 }

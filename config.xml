@@ -5,17 +5,6 @@
 	xmlns:android 	= 	"http://schemas.android.com/apk/res/android"
 	id				=	"com.vaintee.rastirata" 
 	version="1.1.2">
-
-	<platform name="android">
-	    <plugin name="cordova-custom-config" version="*"/>
-	     
-	    <custom-config-file target="AndroidManifest.xml" parent="/*">
-	        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-	        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	    </custom-config-file>
-	</platform>
-
-	<plugin name="cordova-plugin-request-location-accuracy" source="npm" />
 	
 	<name>Rastirata</name>
 	
@@ -27,6 +16,7 @@
 		Teemu Vainio
 	</author>
 	
+	<preference name="phonegap-version" value="cli-6.0.0" />
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" platform="android" />
